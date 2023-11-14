@@ -1,9 +1,9 @@
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mobilele?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: root
-    password: 1024
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/mobilele?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:}
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
@@ -11,3 +11,5 @@ spring:
   sql:
     init:
       mode: never
+
+#default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}

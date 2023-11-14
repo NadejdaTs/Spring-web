@@ -10,7 +10,6 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 @Getter
-@Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,4 +41,43 @@ public class User {
         this.role = new HashSet<>();
     }
 
+    public User setId(Long id) {
+        this.id = id;
+        return this;
+    }
+
+    public User setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    public User setFullName(String fullName) {
+        this.fullName = fullName;
+        return this;
+    }
+
+    public User setAge(Integer age) {
+        this.age = age;
+        return this;
+    }
+
+    public User setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public User setRole(Set<Role> role) {
+        this.role = role;
+        return this;
+    }
+
+    public User setLevel(Level level) {
+        this.level = level;
+        return this;
+    }
 }

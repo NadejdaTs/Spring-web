@@ -1,12 +1,10 @@
 package org.softuni.mobilele.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class UserEntity extends BaseEntity{
+    @Column(unique = true)
     private String email;
     private String password;
     private String firstName;
@@ -65,4 +63,6 @@ public class UserEntity extends BaseEntity{
         this.active = active;
         return this;
     }
+
+
 }

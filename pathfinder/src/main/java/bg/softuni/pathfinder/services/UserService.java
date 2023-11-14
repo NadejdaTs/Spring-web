@@ -1,5 +1,7 @@
 package bg.softuni.pathfinder.services;
 
+import bg.softuni.pathfinder.dto.UserLoginDTO;
+import bg.softuni.pathfinder.dto.UserRegistrationDTO;
 import bg.softuni.pathfinder.models.User;
 
 import java.util.List;
@@ -7,5 +9,7 @@ import java.util.List;
 public interface UserService {
     List<User> getAll();
 
-    boolean loginUser(String userName);
+    boolean loginUser(UserLoginDTO userLoginDTO);
+
+    boolean registerUser(UserRegistrationDTO userRegistrationDTO);
 }
