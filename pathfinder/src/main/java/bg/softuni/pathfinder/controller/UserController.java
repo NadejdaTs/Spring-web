@@ -3,12 +3,13 @@ package bg.softuni.pathfinder.controller;
 import bg.softuni.pathfinder.models.User;
 import bg.softuni.pathfinder.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+//@RequestMapping("/users")
 public class UserController {
     private final UserService userService;
 
@@ -17,9 +18,10 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/users/all")
     public List<User> getAll(){
         return this.userService.getAll();
+//        return "test!";
     }
 
    /* @GetMapping("/login")
