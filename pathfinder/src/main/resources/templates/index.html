@@ -20,16 +20,14 @@
 <body>
 <div class="wrapper">
     <!-- Navigation -->
-<!--    <header th:fragment="navigation">-->
     <header>
     <nav class="main-nav">
         <ul>
-<!--                <th:block th:if="${@currentUser.id == null}">-->
                 <li>
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/">Login</a>
+                    <a th:href="@{/users/login}">Login</a>
                 </li>
                 <li>
                     <a href="/">Register</a>
@@ -49,7 +47,6 @@
                 <li>
                     <a href="/">Logout</a>
                 </li>
-<!--                </th:block>-->
         </ul>
     </nav>
 </header>

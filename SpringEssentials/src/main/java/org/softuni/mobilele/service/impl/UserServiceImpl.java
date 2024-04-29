@@ -1,9 +1,10 @@
-package org.softuni.mobilele.service;
+package org.softuni.mobilele.service.impl;
 
 import org.softuni.mobilele.model.dto.UserLoginDTO;
 import org.softuni.mobilele.model.dto.UserRegistrationDTO;
 import org.softuni.mobilele.model.entity.UserEntity;
 import org.softuni.mobilele.repository.UserRepository;
+import org.softuni.mobilele.service.UserService;
 import org.softuni.mobilele.util.CurrentUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

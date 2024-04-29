@@ -1,7 +1,7 @@
 package org.softuni.mobilele.model.entity;
 
 import jakarta.persistence.*;
-import org.softuni.mobilele.enums.ModelCategory;
+import org.softuni.mobilele.model.enums.ModelCategory;
 
 @Entity
 @Table(name = "models")

@@ -11,5 +11,9 @@ spring:
   sql:
     init:
       mode: never
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
 
 #default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}

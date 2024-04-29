@@ -2,8 +2,8 @@ package org.softuni.mobilele.model.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.JdbcTypeCode;
-import org.softuni.mobilele.enums.EngineEnum;
-import org.softuni.mobilele.enums.Transmission;
+import org.softuni.mobilele.model.enums.EngineEnum;
+import org.softuni.mobilele.model.enums.TransmissionEnum;
 
 import java.math.BigDecimal;
 import java.sql.Types;
@@ -22,7 +22,7 @@ public class OfferEntity extends BaseEntity{
     private EngineEnum engine;
 
     @Enumerated(EnumType.STRING)
-    private Transmission transmission;
+    private TransmissionEnum transmission;
 
     private String imageUrl;
 
@@ -68,11 +68,11 @@ public class OfferEntity extends BaseEntity{
         return this;
     }
 
-    public Transmission getTransmission() {
+    public TransmissionEnum getTransmission() {
         return transmission;
     }
 
-    public OfferEntity setTransmission(Transmission transmission) {
+    public OfferEntity setTransmission(TransmissionEnum transmission) {
         this.transmission = transmission;
         return this;
     }
