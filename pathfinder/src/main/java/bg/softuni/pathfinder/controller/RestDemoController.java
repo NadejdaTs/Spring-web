@@ -1,27 +1,32 @@
 package bg.softuni.pathfinder.controller;
 
 import bg.softuni.pathfinder.models.User;
-import bg.softuni.pathfinder.services.UserService;
+import bg.softuni.pathfinder.services.RestDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 //@RequestMapping("/users")
-public class UserController {
-    private final UserService userService;
+public class RestDemoController {
+    private RestDemoService userService;
 
     @Autowired
-    public UserController(UserService userService) {
+    public RestDemoController(RestDemoService userService) {
         this.userService = userService;
     }
 
-    @GetMapping("/users/all")
+    @RequestMapping(path = "/all", method = RequestMethod.GET)
+//    @GetMapping("/users/all")
     public List<User> getAll(){
         return this.userService.getAll();
 //        return "test!";
+    }
+
+    @Autowired
+    public void setRestDemoService(RestDemoService restDemoService){
+        this.userService = restDemoService;
     }
 
    /* @GetMapping("/login")

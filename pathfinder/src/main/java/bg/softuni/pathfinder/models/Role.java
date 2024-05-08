@@ -1,5 +1,6 @@
 package bg.softuni.pathfinder.models;
 
+import bg.softuni.pathfinder.models.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

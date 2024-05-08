@@ -1,12 +1,7 @@
 package bg.softuni.pathfinder.dto;
 
-import bg.softuni.pathfinder.models.Level;
-import bg.softuni.pathfinder.models.Role;
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Set;
 
 @Getter
 @NoArgsConstructor

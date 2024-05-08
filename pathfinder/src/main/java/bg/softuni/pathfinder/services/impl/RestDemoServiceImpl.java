@@ -1,13 +1,14 @@
-package bg.softuni.pathfinder.services;
+package bg.softuni.pathfinder.services.impl;
 
 import bg.softuni.pathfinder.dto.UserLoginDTO;
 import bg.softuni.pathfinder.dto.UserRegistrationDTO;
-import bg.softuni.pathfinder.models.Level;
+import bg.softuni.pathfinder.models.enums.Level;
 import bg.softuni.pathfinder.models.Role;
 import bg.softuni.pathfinder.models.User;
-import bg.softuni.pathfinder.models.UserRole;
+import bg.softuni.pathfinder.models.enums.UserRole;
 import bg.softuni.pathfinder.repositories.RoleRepository;
 import bg.softuni.pathfinder.repositories.UserRepository;
+import bg.softuni.pathfinder.services.RestDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,12 +18,12 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class RestDemoServiceImpl implements RestDemoService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository) {
+    public RestDemoServiceImpl(UserRepository userRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
     }
