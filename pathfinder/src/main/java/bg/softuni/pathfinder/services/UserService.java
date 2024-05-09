@@ -1,12 +1,9 @@
 package bg.softuni.pathfinder.services;
 
-import bg.softuni.pathfinder.models.dto.UserLoginBindingModel;
-import bg.softuni.pathfinder.models.dto.UserRegisterBindingModel;
+import bg.softuni.pathfinder.models.User;
+
+import java.util.Optional;
 
 public interface UserService {
-    void register(UserRegisterBindingModel userRegisterBindingModel);
-
-    boolean login(UserLoginBindingModel userLoginBindingModel);
-
-    void logout();
+    Optional<User> getLoggedUser();
 }
