@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc6ed4d0-e2be-4a58-a08e-0b41f6be9098" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/repository/FileBaseUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/repository/InMemoryUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/java/softuni/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/static/lab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/static/wired.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/actionGet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/actionPost.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/templates/registerForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/src/main/resources/users.scv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/repository/FileBaseUserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/repository/InMemoryUserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/softuni/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/static/lab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/static/wired.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/actionGet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/actionPost.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/templates/registerForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JSdemo/target/classes/users.scv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/MobileleApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/init/DBInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/dto/BrandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/dto/CreateOfferDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/dto/ModelDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/dto/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/dto/UserRegistrationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/entity/BrandEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/entity/ModelEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/entity/OfferEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/entity/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/enums/EngineEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/enums/ModelCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/model/enums/TransmissionEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/repository/BrandRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/repository/ModelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/repository/OfferRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/service/BrandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/service/OfferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/service/impl/BrandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/service/impl/OfferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/util/CurrentUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/web/OfferController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/web/UserLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/java/org/softuni/mobilele/web/UserRegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/old/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/css/reset-css.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/img/car-dealership-car-car-showroom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/img/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/img/user-avatar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/static/js/jquery-3.5.1.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/HTMLandCSS/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/auth-login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/auth-register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/brands.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/fragments/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/fragments/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/offer-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/offers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/main/resources/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringEssentials/src/test/java/org/softuni/mobilele/MobileleApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/7.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/repository/FileBaseUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/repository/InMemoryUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/java/softuni/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/resources/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringFundamentals/src/main/resources/users.scv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/7.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/build/classes/java/main/thymeleaf/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/build/resources/main/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/src/main/java/thymeleaf/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringThymeleafTest/src/main/resources/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/deps.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/src/main/java/org/softuni/bootdemo/BootDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/src/main/java/org/softuni/bootdemo/util/CLGreeter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/src/main/java/org/softuni/bootdemo/web/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/src/main/resources/templates/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-demo/src/test/java/org/softuni/bootdemo/BootDemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/main/java/i18n/I18nApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/main/java/i18n/web/LangControllerCookies.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/main/java/i18n/web/LangControllerSessions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/main/resources/templates/lang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/main/resources/templates/session.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../i18n/src/test/java/bg/softuni/i18n/I18nApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/MobileleApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/enums/EngineEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/enums/ModelCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/enums/Transmission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/init/DBInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/dto/CreateOfferDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/dto/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/dto/UserRegistrationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/entity/BrandEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/entity/ModelEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/entity/OfferEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/model/entity/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/repository/BrandRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/repository/ModelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/repository/OfferRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/service/OfferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/service/OfferServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/util/CurrentUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/web/OfferController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/web/UserLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/softuni/mobilele/web/UserRegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/old/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/reset-css.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/car-dealership-car-car-showroom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/user-avatar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.5.1.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth-login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/auth-register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/brands.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/offer-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/offers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/softuni/mobilele/MobileleApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/PathfinderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/controller/RestDemoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/controller/RoutesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/controller/UsersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/dto/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/dto/UserRegistrationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/Picture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/Route.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/dto/AddRouteBindingModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/dto/UserLoginBindingModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/dto/UserRegisterBindingModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/enums/CategoryName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/enums/Level.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/models/enums/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/MessageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/PictureRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/RouteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/AuthenticationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/RestDemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/RouteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/impl/AuthenticationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/impl/RestDemoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/impl/RouteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/services/session/LoggedUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/java/bg/softuni/pathfinder/web/UserLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/css/mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/add-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/amazing-routes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/bicycle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/cloudy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/difficulty-level.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/most-commented.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/motorcycle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/pedestrian.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/pic1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/pic2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/pic3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/pic4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/rainy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/site-bgr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/01d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/01n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/02d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/02n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/03d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/03n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/04d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/04n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/09d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/09n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/10d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/10n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/11d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/11n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/13d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/13n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/50d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/images/weather-icons/50n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/add-route.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/bicycle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/car.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/fragments/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/fragments/navigation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/motorcycle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/pedestrian.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/route-details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/main/resources/templates/routes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pathfinder/src/test/java/bg/softuni/pathfinder/PathfinderApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2gHBq5gEbJIoQNHlGQ9A2t4GeNQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/JavaDevelopment/SpringWebFundamentals/ProjectsGit/09.ExamPrep/01.ExamPrep/ResellerApp"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MobileleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="MYSQL_PASSOWRD" value="1024" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="org.softuni.mobilele.MobileleApplication" />
+      <module name="mobilele.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.mobilele.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MobileleApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc6ed4d0-e2be-4a58-a08e-0b41f6be9098" name="Changes" comment="" />
+      <created>1715344822349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715344822349</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
