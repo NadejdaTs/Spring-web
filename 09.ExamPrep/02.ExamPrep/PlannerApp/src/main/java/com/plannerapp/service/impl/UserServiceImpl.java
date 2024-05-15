@@ -27,17 +27,17 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        User dbUser = this.userRepository.findByUsername(userRegisterBindingModel.getUsername());
-        if(dbUser != null){
-            return false;
-        }
-//        boolean existsByUsernameOrEmail = userRepository.existsByUsernameOrEmail(
-//                userRegisterBindingModel.getUsername(),
-//                userRegisterBindingModel.getEmail());
-//
-//        if (existsByUsernameOrEmail) {
+//        User dbUser = this.userRepository.findByUsername(userRegisterBindingModel.getUsername());
+//        if(dbUser != null){
 //            return false;
 //        }
+        boolean existsByUsernameOrEmail = userRepository.existsByUsernameOrEmail(
+                userRegisterBindingModel.getUsername(),
+                userRegisterBindingModel.getEmail());
+
+        if (existsByUsernameOrEmail) {
+            return false;
+        }
 
         User user = new User();
         user.setUsername(userRegisterBindingModel.getUsername());
