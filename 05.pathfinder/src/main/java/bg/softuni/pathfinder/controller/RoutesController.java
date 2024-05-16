@@ -1,6 +1,6 @@
 package bg.softuni.pathfinder.controller;
 
-import bg.softuni.pathfinder.models.dto.AddRouteBindingModel;
+import bg.softuni.pathfinder.models.dto.binding.AddRouteBindingModel;
 import bg.softuni.pathfinder.models.enums.CategoryName;
 import bg.softuni.pathfinder.models.enums.Level;
 import bg.softuni.pathfinder.services.RouteService;
@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.Locale;
 
 @Controller
 @RequestMapping("/routes")

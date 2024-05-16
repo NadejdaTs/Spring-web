@@ -1,8 +1,8 @@
 package bg.softuni.pathfinder.services.impl;
 
 import bg.softuni.pathfinder.models.User;
-import bg.softuni.pathfinder.models.dto.UserLoginBindingModel;
-import bg.softuni.pathfinder.models.dto.UserRegisterBindingModel;
+import bg.softuni.pathfinder.models.dto.binding.UserLoginBindingModel;
+import bg.softuni.pathfinder.models.dto.binding.UserRegisterBindingModel;
 import bg.softuni.pathfinder.repositories.UserRepository;
 import bg.softuni.pathfinder.services.AuthenticationService;
 import bg.softuni.pathfinder.services.session.LoggedUser;

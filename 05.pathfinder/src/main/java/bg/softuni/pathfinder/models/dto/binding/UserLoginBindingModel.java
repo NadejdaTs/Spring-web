@@ -1,4 +1,4 @@
-package bg.softuni.pathfinder.models.dto;
+package bg.softuni.pathfinder.models.dto.binding;
 
 import lombok.Getter;
 import lombok.Setter;

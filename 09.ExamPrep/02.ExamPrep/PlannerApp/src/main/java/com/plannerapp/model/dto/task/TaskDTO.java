@@ -8,15 +8,19 @@ import lombok.Setter;
 @Getter
 @Setter
 public class TaskDTO {
+    private Long id;
     private String description;
     private String dueDate;
     private PriorityName priority;
 
     public static TaskDTO createFromTask(Task task){
         TaskDTO taskDTO = new TaskDTO();
+
+        taskDTO.setId(task.getId());
         taskDTO.setDescription(task.getDescription());
         taskDTO.setPriority(task.getPriority().getName());
         taskDTO.setDueDate(task.getDueDate().toString());
+
         return taskDTO;
     }
 }

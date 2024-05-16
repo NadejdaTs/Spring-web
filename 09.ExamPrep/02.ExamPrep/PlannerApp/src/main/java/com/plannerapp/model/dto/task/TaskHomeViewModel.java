@@ -8,15 +8,18 @@ import java.util.List;
 
 @Getter
 public class TaskHomeViewModel {
-    private List<TaskDTO> assignedTasksToMe;
+    private List<TaskDTO> assignedTasks;
     private List<TaskDTO> availableTasks;
+//    private int availableSize;
 
     public TaskHomeViewModel(){
-        assignedTasksToMe = new ArrayList<>();
+        assignedTasks = new ArrayList<>();
         availableTasks = new ArrayList<>();
     }
 
-    public TaskHomeViewModel(List<TaskDTO> assignedTasksToMe, List<TaskDTO> availableTasks) {
-        this();
+    public TaskHomeViewModel(List<TaskDTO> assignedTasks, List<TaskDTO> availableTasks) {
+        this.assignedTasks = assignedTasks;
+        this.availableTasks = availableTasks;
+//        this.availableSize = availableTasks.size();
     }
 }

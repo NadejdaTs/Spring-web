@@ -19,11 +19,17 @@ public class HomeController {
 
     @GetMapping("/")
     public ModelAndView index(){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         return new ModelAndView("index");
     }
 
     @GetMapping("/home")
     public ModelAndView home(){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
         TaskHomeViewModel viewModel = taskService.getHomeViewData(loggedUser.getUsername());
         return new ModelAndView("home", "tasks", viewModel);
     }

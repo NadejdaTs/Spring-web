@@ -1,4 +1,4 @@
-package bg.softuni.pathfinder.models.dto;
+package bg.softuni.pathfinder.models.dto.binding;
 
 import bg.softuni.pathfinder.models.enums.Level;
 import bg.softuni.pathfinder.models.enums.CategoryName;

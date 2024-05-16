@@ -3,7 +3,7 @@ package bg.softuni.pathfinder.services.impl;
 import bg.softuni.pathfinder.models.Category;
 import bg.softuni.pathfinder.models.Route;
 import bg.softuni.pathfinder.models.User;
-import bg.softuni.pathfinder.models.dto.AddRouteBindingModel;
+import bg.softuni.pathfinder.models.dto.binding.AddRouteBindingModel;
 import bg.softuni.pathfinder.repositories.CategoryRepository;
 import bg.softuni.pathfinder.repositories.RouteRepository;
 import bg.softuni.pathfinder.services.RouteService;
