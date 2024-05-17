@@ -3,6 +3,7 @@ package bg.softuni.pathfinder.services.impl;
 import bg.softuni.pathfinder.models.User;
 import bg.softuni.pathfinder.models.dto.binding.UserLoginBindingModel;
 import bg.softuni.pathfinder.models.dto.binding.UserRegisterBindingModel;
+import bg.softuni.pathfinder.models.enums.Level;
 import bg.softuni.pathfinder.repositories.UserRepository;
 import bg.softuni.pathfinder.services.AuthenticationService;
 import bg.softuni.pathfinder.services.session.LoggedUser;
@@ -28,7 +29,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public void register(UserRegisterBindingModel userRegisterBindingModel) {
         User user = mapper.map(userRegisterBindingModel, User.class);
-
+        user.setLevel(Level.BEGINNER);
         user.setPassword(passwordEncoder.encode(userRegisterBindingModel.getPassword()));
         userRepository.save(user);
     }

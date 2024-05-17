@@ -13,13 +13,13 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private final LoggedUser loggedUser;
     private final UserRepository userRepository;
+    private final LoggedUser loggedUser;
     private final ModelMapper mapper;
 
-    public UserServiceImpl(LoggedUser loggedUser, UserRepository userRepository, ModelMapper mapper) {
-        this.loggedUser = loggedUser;
+    public UserServiceImpl(UserRepository userRepository, LoggedUser loggedUser, ModelMapper mapper) {
         this.userRepository = userRepository;
+        this.loggedUser = loggedUser;
         this.mapper = mapper;
     }
 

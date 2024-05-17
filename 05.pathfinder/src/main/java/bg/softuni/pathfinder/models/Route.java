@@ -35,6 +35,9 @@ public class Route {
     @Column(name = "video_url")
     private String videoUrl;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @ManyToMany
     private Set<Category> categories;
 
