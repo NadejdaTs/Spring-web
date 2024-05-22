@@ -12,11 +12,14 @@ import bg.softuni.pathfinder.repositories.RouteRepository;
 import bg.softuni.pathfinder.services.RouteService;
 import bg.softuni.pathfinder.services.UserService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeMap;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class RouteServiceImpl implements RouteService {
@@ -36,10 +39,21 @@ public class RouteServiceImpl implements RouteService {
     public void add(AddRouteBindingModel addRouteBindingModel) {
         Route route = this.mapper.map(addRouteBindingModel, Route.class);
         route.getCategories().clear();
+
         Set<Category> categories = categoryRepository.findByNameIn(addRouteBindingModel.getCategories());
         route.addCategories(categories);
+
         Optional<User> user = userService.getLoggedUser();
         route.setAuthor(user.get());
+
+        String regex = "v=(.*)";
+        Pattern compile = Pattern.compile(regex);
+        Matcher matcher = compile.matcher(addRouteBindingModel.getVideoUrl());
+        if(matcher.find()){
+            String url = matcher.group(1);
+            route.setVideoUrl(url);
+        }
+
         routeRepository.save(route);
     }
 
@@ -54,6 +68,11 @@ public class RouteServiceImpl implements RouteService {
     public RouteDetailsViewModel getDetails(Long id) {
         Route route = routeRepository.findById(id)
                 .orElseThrow(() -> new RouteNotFoundException("Route with id: " + id + " was not found!"));
-        return mapper.map(route, RouteDetailsViewModel.class);
+//        mapper.createTypeMap(Route.class, RouteDetailsViewModel.class)
+//                .addMappings(mapper -> mapper.map(r -> r.getAuthor().getUsername(), RouteDetailsViewModel::setAuthorName));
+        RouteDetailsViewModel routeDetailsViewModel = mapper.map(route, RouteDetailsViewModel.class);
+        routeDetailsViewModel.setAuthorName(route.getAuthor().getFullName());
+//        return mapper.map(route, RouteDetailsViewModel.class);
+        return routeDetailsViewModel;
     }
 }

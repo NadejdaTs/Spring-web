@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GIRA</title>
+    <link rel="icon" href="/img/projectLogo.png" type="image/icon type">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/reset-css.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="page-container">
+    <div th:replace="fragments/navigation::header"/>
+<!--    Login/ Register-->
+    <main class="content-wrap">
+        <div class="center">
+            <h1 class="a">WELCOME TO GIRA</h1>
+            <h3 class="b transition">The #1 software development tool used by agile teams</h3>
+            <p class="b h3 transition">
+                <a class="c"
+                   th:href="@{/users/login}">
+                    Login
+                </a>if you have an acount or
+                <a class="c"
+                   th:href="@{/users/register}">
+                    Register
+                </a>and manage your tasks</p>
+        </div>
+    </main>
+    <div th:replace="fragments/navigation::footer"/>
+</div>
+</body>
+</html>

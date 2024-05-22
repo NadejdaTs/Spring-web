@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GIRA</title>
+    <link rel="icon" href="/img/projectLogo.png" type="image/icon type">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/reset-css.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<div class="page-container">
+    <div th:replace="fragments/navigation::header"/>
+    <!--    Login/ Register-->
+
+    <main class="content-wrap">
+        <h1 class="text-center mt-2"><span class="badge badge-pill badge-dark">Login</span></h1>
+        <hr class="hr-3 w-25 bg-white"/>
+        <form class="mx-auto w-25 bg-blur"
+              th:method="POST"
+              th:action="@{/users/login}"
+              th:object="${userLoginBindingModel}">
+<!--            <small class="text-danger new-line">Error message</small>-->
+
+            <div th:if="${hasLoginError}"
+                 th:text="'Incorrect email or password!'"
+                 class="text-danger"></div>
+            <div th:if="${#fields.hasErrors('password')}"
+                 th:errors="*{password}"
+                 class="text-danger"></div>
+            <div th:if="${#fields.hasErrors('email')}"
+                 th:errors="*{email}"
+                 class="text-danger"></div>
+
+            <br/>
+<!--            <small class="text-danger new-line">Incorrect email or password!</small>-->
+            <div class="form-group input-container">
+                <div class="input-container label-holder d-flex justify-content-center">
+                    <label for="email" class="h3 mb-2">Email</label>
+                </div>
+                <input th:field="*{email}"
+                       th:errorclass="bg-danger"
+                       type="text" class="form-control" id="email"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder d-flex justify-content-center">
+                    <label for="password" class="h3 mb-2">Password</label>
+                </div>
+                <input th:field="*{password}"
+                       th:errorclass="bg-danger"
+                       type="password" class="form-control" id="password"/>
+            </div>
+            <div class="button-holder d-flex justify-content-center">
+                <button type="submit" class="button  mb-3">Login</button>
+            </div>
+        </form>
+    </main>
+
+
+    <div th:replace="fragments/navigation::footer"/>
+</div>
+</body>
+</html>
