@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-nav rounded">
+        <a class="nav-link text-white active h5" href="/">Shopping List App</a>
+        <a th:if="${@loggedUser.isLogged}" class="nav-link text-white active h5" th:href="@{/product/add}">Add product</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul class="navbar-nav row">
+                <li th:unless="${@loggedUser.isLogged}" class="nav-item col-md-4">
+                    <a class="nav-link text-white active h5" th:href="@{/users/login}">Login</a>
+                </li>
+                <li th:unless="${@loggedUser.isLogged}" class="nav-item col-md-4">
+                    <a class="nav-link text-white active h5" th:href="@{/users/register}">Register</a>
+                </li>
+                <li th:if="${@loggedUser.isLogged}" class="nav-item col-md-4">
+                    <a class="nav-link text-white active h5" th:href="@{/users/logout}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<footer class="footer bg-transparent  py-2">
+    <div class="container-fluid text-center">
+        <div class="footer-background h5 text-white">
+            &copy; Spring team 2021. All rights reserved.
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+package softuni.bg.shopping.model.entity.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+import softuni.bg.shopping.model.entity.Product;
+
+import java.math.BigDecimal;
+
+@Getter
+@Setter
+public class ProductsDTO {
+    private String name;
+    private BigDecimal price;
+
+    public static ProductsDTO ProductsDTO(Product product){
+        ProductsDTO productsDTO = new ProductsDTO();
+
+        productsDTO.setName(product.getName());
+        productsDTO.setPrice(product.getPrice());
+
+        return productsDTO;
+    }
+}

@@ -23,7 +23,7 @@
                     <a th:unless="${@loggedUser.isLogged}" class="button" th:href="@{/users/register}">Register</a>
                 </li>
                 <li class="nav-item col-md-6">
-                    <a th:if="${@loggedUser.isLogged}" class="button text-nowrap" href="/">Add Task</a>
+                    <a th:if="${@loggedUser.isLogged}" class="button text-nowrap" th:href="@{/tasks/add}">Add Task</a>
                 </li>
                 <li class="nav-item col-md-5">
                     <a th:if="${@loggedUser.isLogged}" class="button" th:href="@{/users/logout}">Logout</a>

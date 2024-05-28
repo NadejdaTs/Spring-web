@@ -11,19 +11,25 @@ import org.springframework.web.servlet.ModelAndView;
 import softuni.bg.Gira.model.binding.UserLoginBindingModel;
 import softuni.bg.Gira.model.binding.UserRegisterBindingModel;
 import softuni.bg.Gira.service.UserService;
+import softuni.bg.Gira.service.impl.LoggedUser;
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
+    private final LoggedUser loggedUser;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, LoggedUser loggedUser) {
         this.userService = userService;
+        this.loggedUser = loggedUser;
     }
 
     @GetMapping("/register")
     public ModelAndView register(@ModelAttribute("userRegisterBindingModel")
                                      UserRegisterBindingModel userRegisterBindingModel){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         return new ModelAndView("/register");
     }
 
@@ -31,6 +37,9 @@ public class UserController {
     public ModelAndView register(@ModelAttribute("userRegisterBindingModel")
                                      @Valid UserRegisterBindingModel userRegisterBindingModel,
                                      BindingResult bindingResult){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
 
         if(bindingResult.hasErrors()){
             return new ModelAndView("register");
@@ -48,6 +57,9 @@ public class UserController {
     @GetMapping("/login")
     public ModelAndView login(@ModelAttribute("userLoginBindingModel")
                                   @Valid UserLoginBindingModel userLoginBindingModel){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         return new ModelAndView("/login");
     }
 
@@ -55,6 +67,9 @@ public class UserController {
     public ModelAndView login(@ModelAttribute("userLoginBindingModel")
                                  @Valid UserLoginBindingModel userLoginBindingModel,
                                  BindingResult bindingResult){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
 
         if(bindingResult.hasErrors()){
             return new ModelAndView("login");
@@ -66,12 +81,15 @@ public class UserController {
             modelAndView.addObject("hasLoginError", true);
             return modelAndView;
         }
-//        return new ModelAndView("redirect:/users/home");
         return new ModelAndView("redirect:/home");
     }
 
     @GetMapping("/logout")
     public ModelAndView logout(){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
+
         this.userService.logout();
         return new ModelAndView("redirect:/");
     }
