@@ -1,4 +1,4 @@
-package softuni.bg.Gira.model.annotation;
+package softuni.bg.Gira.vallidation.annotation;
 
 import jakarta.validation.Payload;
 import softuni.bg.Gira.vallidation.StringDateInFutureValidator;

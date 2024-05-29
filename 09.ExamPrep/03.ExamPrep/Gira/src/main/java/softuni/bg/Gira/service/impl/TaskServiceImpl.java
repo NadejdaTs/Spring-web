@@ -35,9 +35,7 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public void add(TasksAddBindingModel tasksAddBindingModel) {
         String name = tasksAddBindingModel.getClassification().name();
-        ClassificationName classification1 = tasksAddBindingModel.getClassification();
         Classification classification = this.classificationRepository.findByName(tasksAddBindingModel.getClassification());
-        String classificationId = classification.getId();
 
         Task task = new Task();
         if(classification != null){

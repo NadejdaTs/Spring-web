@@ -2,7 +2,7 @@ package softuni.bg.Gira.vallidation;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import softuni.bg.Gira.model.annotation.StringDateInFuture;
+import softuni.bg.Gira.vallidation.annotation.StringDateInFuture;
 
 import java.time.LocalDate;
 

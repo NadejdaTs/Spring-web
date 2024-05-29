@@ -24,7 +24,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public ModelAndView home(){
-        HomeViewModel homeViewModel = this.productService.getHomeViewData(loggedUser.getUsername());
-        return new ModelAndView("home");
+        HomeViewModel homeViewModel = this.productService.getHomeViewData();
+        return new ModelAndView("home", "products", homeViewModel);
     }
 }

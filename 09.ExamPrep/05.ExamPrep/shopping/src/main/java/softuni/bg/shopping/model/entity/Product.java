@@ -30,4 +30,7 @@ public class Product extends BaseEntity{
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private CategoryName category;
+
+    @ManyToOne
+    private User user;
 }

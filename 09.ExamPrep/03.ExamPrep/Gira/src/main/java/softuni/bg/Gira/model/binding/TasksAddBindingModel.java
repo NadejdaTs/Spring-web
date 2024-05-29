@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-import softuni.bg.Gira.model.annotation.StringDateInFuture;
+import softuni.bg.Gira.vallidation.annotation.StringDateInFuture;
 import softuni.bg.Gira.model.enums.ClassificationName;
 
 @Getter
@@ -16,7 +16,7 @@ public class TasksAddBindingModel {
     @Size(min = 5, message = "Description length must be more than 5 characters!")
     private String description;
 
-    @Size(min = 1, message = "The date cannot be in the past!!")
+    @Size(min = 1, message = "The date cannot be in the past!")
     @StringDateInFuture
     private String dueDate;
 

@@ -4,19 +4,31 @@ import lombok.Getter;
 import lombok.Setter;
 import softuni.bg.shopping.model.entity.dto.ProductsDTO;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 public class HomeViewModel {
-    Set<ProductsDTO> products;
+    private List<ProductsDTO> foods;
+    private List<ProductsDTO> drinks;
+    private List<ProductsDTO> households;
+    private List<ProductsDTO> other;
+    private BigDecimal totalPrice;
 
     public HomeViewModel(){
-        this.products = new HashSet<>();
+        this.foods = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+        this.households = new ArrayList<>();
+        this.other = new ArrayList<>();
     }
 
-    public HomeViewModel(Set<ProductsDTO> products) {
-        this.products = products;
+    public HomeViewModel(List<ProductsDTO> foods, List<ProductsDTO> drinks, List<ProductsDTO> households, List<ProductsDTO> other, BigDecimal totalPrice) {
+        this.foods = foods;
+        this.drinks = drinks;
+        this.households = households;
+        this.other = other;
+        this.totalPrice = totalPrice;
     }
 }

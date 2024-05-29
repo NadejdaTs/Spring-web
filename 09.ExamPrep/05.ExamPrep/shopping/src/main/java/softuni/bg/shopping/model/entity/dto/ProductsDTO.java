@@ -9,12 +9,14 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class ProductsDTO {
+    private String id;
     private String name;
     private BigDecimal price;
 
-    public static ProductsDTO ProductsDTO(Product product){
+    public static ProductsDTO createFromTask(Product product){
         ProductsDTO productsDTO = new ProductsDTO();
 
+        productsDTO.setId(product.getId());
         productsDTO.setName(product.getName());
         productsDTO.setPrice(product.getPrice());
 
