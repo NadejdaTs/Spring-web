@@ -46,6 +46,21 @@ public class ProductController {
     public ModelAndView buy(@PathVariable("id") String id){
         BigDecimal totalPrice = this.productService.buy(id);
 
-        return new ModelAndView("redirect:/home");
+        ModelAndView modelAndView = new ModelAndView("home");
+        HomeViewModel homeViewModel = this.productService.getHomeViewData();
+        homeViewModel.setTotalPrice(totalPrice);
+
+        return new ModelAndView("home", "products", homeViewModel);
+    }
+
+    @PostMapping("/product/buyAll")
+    public ModelAndView buyAll(){
+        boolean hasBought = this.productService.buyAll();
+
+        ModelAndView modelAndView = new ModelAndView("home");
+        HomeViewModel homeViewModel = this.productService.getHomeViewData();
+//        homeViewModel.setTotalPrice(BigDecimal.valueOf(0));
+
+        return new ModelAndView("home", "products", homeViewModel);
     }
 }

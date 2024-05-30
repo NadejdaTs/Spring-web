@@ -1,5 +1,6 @@
 package softuni.bg.shopping.service.impl;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import softuni.bg.shopping.model.entity.Product;
 import softuni.bg.shopping.model.entity.User;
@@ -31,22 +32,19 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public HomeViewModel getHomeViewData() {
-        String username = loggedUser.getUsername();
-        Optional<User> optUser = this.userRepository.findByUsername(username);
-
-        List<ProductsDTO> foods = this.productRepository.findByUserAndCategory(optUser.get(), CategoryName.FOOD)
+        List<ProductsDTO> foods = this.productRepository.findByCategoryAndUserIsNull(CategoryName.FOOD)
                 .stream()
                 .map(ProductsDTO::createFromTask)
                 .toList();
-        List<ProductsDTO> drinks = this.productRepository.findByUserAndCategory(optUser.get(), CategoryName.DRINK)
+        List<ProductsDTO> drinks = this.productRepository.findByCategoryAndUserIsNull(CategoryName.DRINK)
                 .stream()
                 .map(ProductsDTO::createFromTask)
                 .toList();
-        List<ProductsDTO> households = this.productRepository.findByUserAndCategory(optUser.get(), CategoryName.HOUSEHOLD)
+        List<ProductsDTO> households = this.productRepository.findByCategoryAndUserIsNull(CategoryName.HOUSEHOLD)
                 .stream()
                 .map(ProductsDTO::createFromTask)
                 .toList();
-        List<ProductsDTO> other = this.productRepository.findByUserAndCategory(optUser.get(), CategoryName.OTHER)
+        List<ProductsDTO> other = this.productRepository.findByCategoryAndUserIsNull(CategoryName.OTHER)
                 .stream()
                 .map(ProductsDTO::createFromTask)
                 .toList();
@@ -54,10 +52,29 @@ public class ProductServiceImpl implements ProductService {
         return new HomeViewModel(foods, drinks, households, other, BigDecimal.valueOf(0));
     }
 
+    private BigDecimal getTotalPrice() {
+        Optional<User> optUser = this.userRepository.findByUsername(this.loggedUser.getUsername());
+        if(optUser.isPresent()){
+            BigDecimal totalPrice = BigDecimal.valueOf(0);
+
+            List<ProductsDTO> allAssignedProducts = this.productRepository.findByUser(optUser.get())
+                    .stream()
+                    .map(ProductsDTO::createFromTask)
+                    .toList();
+
+            for (ProductsDTO allAssignedProduct : allAssignedProducts) {
+                BigDecimal price = allAssignedProduct.getPrice();
+                totalPrice = new BigDecimal(String.valueOf(totalPrice)).add(new BigDecimal(String.valueOf(price)));
+            }
+
+            return totalPrice;
+        }
+        return BigDecimal.valueOf(0);
+    }
+
     @Override
     public boolean addProduct(AddProductBindingModel addProductBindingModel) {
         Optional<Product> optProduct = this.productRepository.findByName(addProductBindingModel.getName());
-        Optional<User> optUser = this.userRepository.findByUsername(this.loggedUser.getUsername());
 
         if(!optProduct.isPresent() && addProductBindingModel.getCategory() != null){
             Product product = new Product();
@@ -67,7 +84,6 @@ public class ProductServiceImpl implements ProductService {
             product.setCategory(addProductBindingModel.getCategory());
             product.setPrice(addProductBindingModel.getPrice());
             product.setNeededBefore(LocalDateTime.parse(addProductBindingModel.getBefore()));
-            product.setUser(optUser.get());
             this.productRepository.save(product);
 
             return true;
@@ -78,14 +94,22 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public BigDecimal buy(String id) {
         Optional<Product> optProduct = this.productRepository.findById(id);
-//        Optional<User> user = this.userRepository.findByUsername(username);
+        Optional<User> optUser = this.userRepository.findByUsername(this.loggedUser.getUsername());
 
-        BigDecimal totalPrice = BigDecimal.valueOf(0);
+        Product product = optProduct.get();
+
         if(optProduct.isPresent()){
-
-            BigDecimal price = optProduct.get().getPrice();
-            totalPrice.add(new BigDecimal(String.valueOf(price)));
+            product.setUser(optUser.get());
+            this.productRepository.save(product);
+            return getTotalPrice();
         }
-        return totalPrice;
+        return BigDecimal.valueOf(0);
+    }
+
+    @Transactional
+    @Override
+    public boolean buyAll() {
+        Optional<User> optUser = this.userRepository.findByUsername(this.loggedUser.getUsername());
+        return this.productRepository.deleteAllByUser(optUser.get());
     }
 }

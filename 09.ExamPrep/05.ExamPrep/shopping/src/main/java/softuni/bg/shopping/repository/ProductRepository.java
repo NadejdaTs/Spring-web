@@ -13,6 +13,9 @@ import java.util.Optional;
 public interface ProductRepository extends JpaRepository<Product, String> {
     Optional<Product> findByName(String name);
 
-    List<Product> findByUserAndCategory(User user, CategoryName food);
+    List<Product> findByCategoryAndUserIsNull(CategoryName drink);
 
+    List<Product> findByUser(User user);
+
+    boolean deleteAllByUser(User user);
 }

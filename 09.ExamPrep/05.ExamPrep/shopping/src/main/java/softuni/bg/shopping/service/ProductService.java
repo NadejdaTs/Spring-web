@@ -11,4 +11,6 @@ public interface ProductService {
     boolean addProduct(AddProductBindingModel addProductBindingModel);
 
     BigDecimal buy(String id);
+
+    boolean buyAll();
 }
