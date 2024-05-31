@@ -19,11 +19,17 @@ public class HomeController {
 
     @GetMapping("/")
     public ModelAndView index(){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         return new ModelAndView("index");
     }
 
     @GetMapping("/home")
     public ModelAndView home(){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
         HomeViewModel homeViewModel = this.productService.getHomeViewData();
         return new ModelAndView("home", "products", homeViewModel);
     }

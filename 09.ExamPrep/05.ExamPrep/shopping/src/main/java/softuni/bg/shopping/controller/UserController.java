@@ -10,20 +10,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import softuni.bg.shopping.model.entity.binding.UserLoginBindingModel;
 import softuni.bg.shopping.model.entity.binding.UserRegisterBindingModel;
+import softuni.bg.shopping.service.LoggedUser;
 import softuni.bg.shopping.service.UserService;
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
+    private final LoggedUser loggedUser;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, LoggedUser loggedUser) {
         this.userService = userService;
+        this.loggedUser = loggedUser;
     }
 
     @GetMapping("/login")
     public ModelAndView login(@ModelAttribute("userLoginBindingModel")
                                   UserLoginBindingModel userLoginBindingModel){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         return new ModelAndView("/login");
     }
 
@@ -31,6 +37,10 @@ public class UserController {
     public ModelAndView login(@ModelAttribute("userLoginBindingModel")
                                   @Valid UserLoginBindingModel userLoginBindingModel,
                                   BindingResult bindingResult){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
+
         if(bindingResult.hasErrors()){
             return new ModelAndView("login");
         }
@@ -49,6 +59,9 @@ public class UserController {
     @GetMapping("/register")
     public ModelAndView register(@ModelAttribute("userRegisterBindingModel")
                                      UserRegisterBindingModel userRegisterBindingModel){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         return new ModelAndView("/register");
     }
 
@@ -56,6 +69,9 @@ public class UserController {
     public ModelAndView register(@ModelAttribute("userRegisterBindingModel")
                                      @Valid UserRegisterBindingModel userRegisterBindingModel,
                                      BindingResult bindingResult){
+        if(loggedUser.isLogged()){
+            return new ModelAndView("redirect:/home");
+        }
         if(bindingResult.hasErrors()){
             return new ModelAndView("/register");
         }
@@ -72,6 +88,9 @@ public class UserController {
 
     @GetMapping("logout")
     public ModelAndView logout(){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
         this.userService.logout();
         return new ModelAndView("redirect:/");
     }

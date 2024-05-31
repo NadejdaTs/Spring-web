@@ -110,6 +110,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public boolean buyAll() {
         Optional<User> optUser = this.userRepository.findByUsername(this.loggedUser.getUsername());
-        return this.productRepository.deleteAllByUser(optUser.get());
+        Integer deleted = this.productRepository.deleteByUser(optUser.get());
+
+        if(deleted > 0){
+            return true;
+        }
+
+        return false;
     }
 }

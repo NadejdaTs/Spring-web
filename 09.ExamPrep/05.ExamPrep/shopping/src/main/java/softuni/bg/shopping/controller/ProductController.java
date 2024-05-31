@@ -27,6 +27,10 @@ public class ProductController {
 
     @GetMapping("/product/add")
     public ModelAndView add(@ModelAttribute("addProductBindingModel") AddProductBindingModel addProductBindingModel){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/users/login");
+        }
+
         return new ModelAndView("/product-add");
     }
 
@@ -34,6 +38,10 @@ public class ProductController {
     public ModelAndView add(@ModelAttribute("addProductBindingModel")
                                 @Valid AddProductBindingModel addProductBindingModel,
                                 BindingResult bindingResult){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/users/login");
+        }
+
         if(bindingResult.hasErrors()){
             return new ModelAndView("/product-add");
         }
@@ -44,9 +52,12 @@ public class ProductController {
 
     @PostMapping("/product/buy/{id}")
     public ModelAndView buy(@PathVariable("id") String id){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/users/login");
+        }
+
         BigDecimal totalPrice = this.productService.buy(id);
 
-        ModelAndView modelAndView = new ModelAndView("home");
         HomeViewModel homeViewModel = this.productService.getHomeViewData();
         homeViewModel.setTotalPrice(totalPrice);
 
@@ -55,11 +66,13 @@ public class ProductController {
 
     @PostMapping("/product/buyAll")
     public ModelAndView buyAll(){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/users/login");
+        }
+
         boolean hasBought = this.productService.buyAll();
 
-        ModelAndView modelAndView = new ModelAndView("home");
         HomeViewModel homeViewModel = this.productService.getHomeViewData();
-//        homeViewModel.setTotalPrice(BigDecimal.valueOf(0));
 
         return new ModelAndView("home", "products", homeViewModel);
     }

@@ -16,6 +16,8 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     List<Product> findByCategoryAndUserIsNull(CategoryName drink);
 
     List<Product> findByUser(User user);
-
+    
     boolean deleteAllByUser(User user);
+
+    Integer deleteByUser(User user);
 }
