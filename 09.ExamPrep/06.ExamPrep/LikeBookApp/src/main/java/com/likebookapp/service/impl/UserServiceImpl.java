@@ -1,13 +1,13 @@
-package softuni.bg.shopping.service.impl;
+package com.likebookapp.service.impl;
 
+import com.likebookapp.model.LoggedUser;
+import com.likebookapp.model.binding.UserLoginBindingModel;
+import com.likebookapp.model.binding.UserRegisterBindingModel;
+import com.likebookapp.model.entity.User;
+import com.likebookapp.repository.UserRepository;
+import com.likebookapp.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import softuni.bg.shopping.model.entity.User;
-import softuni.bg.shopping.model.entity.binding.UserLoginBindingModel;
-import softuni.bg.shopping.model.entity.binding.UserRegisterBindingModel;
-import softuni.bg.shopping.repository.UserRepository;
-import softuni.bg.shopping.service.LoggedUser;
-import softuni.bg.shopping.service.UserService;
 
 import java.util.Optional;
 
@@ -30,13 +30,14 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 
-        Optional<User> optUser = this.userRepository.findByUsername(userRegisterBindingModel.getUsername());
+        String username = userRegisterBindingModel.getUsername();
+        Optional<User> optUser = this.userRepository.findByUsernameOrEmail(username, userRegisterBindingModel.getEmail());
         if(optUser.isPresent()){
             return false;
         }
 
         User user = new User();
-        user.setUsername(userRegisterBindingModel.getUsername());
+        user.setUsername(username);
         user.setEmail(userRegisterBindingModel.getEmail());
         user.setPassword(this.passwordEncoder.encode(password));
         this.userRepository.save(user);

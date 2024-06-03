@@ -22,12 +22,19 @@ public class MoodInit implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if(this.moodRepository.count() == 0) {
             List<Mood> moods = new ArrayList<>();
+
             Arrays.stream(MoodName.values()).forEach(m -> {
                 Mood mood = new Mood();
                 mood.setName(m);
-                mood.setDescription(m.name());
+                mood.setDescription(getCapitalDesc(m.name().toLowerCase()));
+                moods.add(mood);
             });
+
             this.moodRepository.saveAll(moods);
         }
+    }
+
+    private String getCapitalDesc(String desc) {
+        return desc.substring(0, 1).toUpperCase() + desc.substring(1);
     }
 }
