@@ -5,9 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import softuni.bg.dictionaryapp.model.binding.AddWordBindingModel;
+import softuni.bg.dictionaryapp.model.view.HomeViewModel;
 import softuni.bg.dictionaryapp.service.LoggedUser;
 import softuni.bg.dictionaryapp.service.WordService;
 
@@ -43,5 +45,27 @@ public class WordController {
 
         this.wordService.addWord(addPostBindingModel);
         return new ModelAndView("redirect:/home");
+    }
+
+    @PostMapping("/word/remove/{id}")
+    public ModelAndView remove(@PathVariable("id") String id){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
+        this.wordService.removeWord(id);
+
+        HomeViewModel homeViewModel = this.wordService.getHomeViewData();
+        return new ModelAndView("home", "words", homeViewModel);
+    }
+
+    @PostMapping("/word/removeAll")
+    public ModelAndView removeAll(){
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
+        this.wordService.removeAll();
+
+        HomeViewModel homeViewModel = this.wordService.getHomeViewData();
+        return new ModelAndView("home", "words", homeViewModel);
     }
 }

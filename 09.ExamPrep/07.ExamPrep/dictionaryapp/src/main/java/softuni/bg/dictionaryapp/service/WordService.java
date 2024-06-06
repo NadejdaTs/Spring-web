@@ -7,4 +7,8 @@ public interface WordService {
     HomeViewModel getHomeViewData();
 
     void addWord(AddWordBindingModel addPostBindingModel);
+
+    void removeWord(String id);
+
+    void removeAll();
 }

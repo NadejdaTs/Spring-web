@@ -27,9 +27,9 @@ public class HomeController {
 
     @GetMapping("/home")
     public ModelAndView home(){
-//        if(!loggedUser.isLogged()){
-//            return new ModelAndView("redirect:/");
-//        }
+        if(!loggedUser.isLogged()){
+            return new ModelAndView("redirect:/");
+        }
         HomeViewModel homeViewModel = this.wordService.getHomeViewData();
         return new ModelAndView("home", "words", homeViewModel);
     }

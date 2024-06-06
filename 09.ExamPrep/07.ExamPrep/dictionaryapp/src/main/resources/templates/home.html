@@ -11,7 +11,7 @@
         <div class="row mt-3 mb-3">
 
             <div  class="col-5 bg-dark rounded m-auto" style="height: 30vh; overflow: auto">
-                <h3 class="mySticky bg-gray text-dark rounded">German: {germanWordsCount}</h3>
+                <h3 th:text="'German: ' + ${#lists.size(words.germanWords)}" class="mySticky bg-gray text-dark rounded"></h3>
                     <div th:each="german: ${words.germanWords}" class="mt-3 rounded badge-warning">
                         <img class="mr-2" src="/img/german.png" alt="Flag" width="20px" height="20px">
                         <span th:text="${german.term} + ': ' + ${german.translation}"></span>
@@ -20,14 +20,14 @@
                         <br>
                         <span th:text="'Added by: ' + ${german.addedBy} + ' on ' + ${german.inputDate}" ></span>
                         <form th:method="POST"
-                              th:href="@{/word/remove/{id}(id=${german.id})}">
-                            <button style="background-color: transparent;border:none;font-weight:600" class="ml-3 text-danger" >Remove</button>
+                              th:action="@{/word/remove/{id}(id=${german.id})}">
+                            <button style="background-color: transparent;border:none;font-weight:bold" class="ml-3 text-danger" >Remove</button>
                         </form>
                     </div>
             </div>
 
             <div class="col-5 bg-dark rounded m-auto" style="height: 30vh; overflow: auto">
-                <h3 class="mySticky bg-gray text-dark rounded">Spanish: {spanishWordsCount}</h3>
+                <h3 th:text="'Spanish: ' + ${#lists.size(words.spanishWords)}" class="mySticky bg-gray text-dark rounded"></h3>
                     <div th:each="spanish: ${words.spanishWords}" class="mt-3 rounded badge-secondary">
                         <img class="mr-2" src="/img/spanish.png" alt="Flag" width="20px" height="20px">
                         <span th:text="${spanish.term} + ': ' + ${spanish.translation}"></span>
@@ -36,7 +36,7 @@
                         <br>
                         <span th:text="'Added by: ' + ${spanish.addedBy} + ' on ' + ${spanish.inputDate}"></span>
                         <form th:method="POST"
-                              th:href="@{/word/remove/{id}(id=${spanish.id})}">
+                              th:action="@{/word/remove/{id}(id=${spanish.id})}">
                             <button style="background-color: transparent;border:none;font-weight:600" class="ml-3 text-danger" >Remove</button>
                         </form>
                     </div>
@@ -45,7 +45,7 @@
 
         <div class="row mt-3 mb-3">
             <div class="col-5 bg-dark rounded m-auto" style="height: 30vh; overflow: auto">
-                <h3 class="mySticky bg-gray text-dark rounded">French: {frenchWordsCount}</h3>
+                <h3 th:text="'French: ' + ${#lists.size(words.frenchWords)}" class="mySticky bg-gray text-dark rounded"></h3>
                     <div th:each="french: ${words.frenchWords}" class="mt-3 rounded badge-info">
                         <img class="mr-2" src="/img/french.png" alt="Flag" width="20px" height="20px">
                         <span th:text="${french.term} + ': ' + ${french.translation}"></span>
@@ -54,14 +54,14 @@
                         <br>
                         <span th:text="'Added by: ' + ${french.addedBy} + ' on ' + ${french.inputDate}"></span>
                         <form th:method="POST"
-                              th:href="@{/word/remove/{id}(id=${french.id})}">
+                              th:action="@{/word/remove/{id}(id=${french.id})}">
                             <button style="background-color: transparent;border:none;font-weight:600" class="ml-3 text-danger" >Remove</button>
                         </form>
                     </div>
             </div>
 
             <div class="col-5 bg-dark rounded m-auto" style="height: 30vh; overflow: auto">
-                <h3 class="mySticky bg-gray text-dark rounded">Italian: {italianWordsCount}</h3>
+                <h3 th:text="'Italian: ' + ${#lists.size(words.italianWords)}" class="mySticky bg-gray text-dark rounded"></h3>
                     <div th:each="italian: ${words.italianWords}" class="mt-3 rounded badge-success">
                         <img class="mr-2" src="/img/italian.png" alt="Flag" width="20px" height="20px">
                         <span th:text="${italian.term} + ': ' + ${italian.translation}">{italianTerm}: {translation}</span>
@@ -69,15 +69,17 @@
                         <span th:text="'Example: ' + ${italian.example}"></span>
                         <br>
                         <span th:text="'Added by: ' + ${italian.addedBy} + ' on ' + ${italian.inputDate}">Added by: {username} on {inputDate}</span>
-                        <a class="ml-3 text-danger" href="/">Remove</a>
-<!--                        <form th:method="POST"-->
-<!--                              th:href="@{/word/remove/{id}(id=${italian.id})}">-->
-<!--                            <button style="background-color: transparent;border:none;font-weight:600" class="ml-3 text-danger" >Remove</button>-->
-<!--                        </form>-->
+                        <form th:method="POST"
+                              th:action="@{/word/remove/{id}(id=${italian.id})}">
+                            <button style="background-color: transparent;border:none;font-weight:600" class="ml-3 text-danger" >Remove</button>
+                        </form>
                     </div>
             </div>
         </div>
-        <a href="/home/remove-all" class="btn btn-danger">Remove all {allWordsCount} words</a>
+        <form th:method="POST"
+              th:action="@{/word/removeAll}">
+            <button th:text="'Remove all ' + ${words.totalWords} + ' words'" class="btn btn-danger"></button>
+        </form>
     </div>
 </main>
 <footer th:replace="~{fragments/commons::footer}"></footer>

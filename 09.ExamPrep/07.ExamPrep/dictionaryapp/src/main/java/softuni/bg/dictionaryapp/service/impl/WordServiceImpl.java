@@ -1,5 +1,6 @@
 package softuni.bg.dictionaryapp.service.impl;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import softuni.bg.dictionaryapp.model.binding.AddWordBindingModel;
 import softuni.bg.dictionaryapp.model.dto.LanguageWordsDTO;
@@ -24,14 +25,12 @@ public class WordServiceImpl implements WordService {
     private final UserRepository userRepository;
     private final LanguageRepository languageRepository;
     private final LoggedUser loggedUser;
-//    private final ModelMapper mapper;
 
     public WordServiceImpl(WordRepository wordRepository, UserRepository userRepository, LanguageRepository languageRepository, LoggedUser loggedUser) {
         this.wordRepository = wordRepository;
         this.userRepository = userRepository;
         this.languageRepository = languageRepository;
-        this.loggedUser = loggedUser;
-//        this.mapper = mapper;
+        this.loggedUser = loggedUser;;
     }
 
     @Override
@@ -55,15 +54,15 @@ public class WordServiceImpl implements WordService {
         List<LanguageWordsDTO> italianWords = this.wordRepository.findByLanguage(italian).stream()
                 .map(LanguageWordsDTO::createFromTask)
                 .toList();
+        long totalWords = this.wordRepository.count();
 
-        return new HomeViewModel(germanWords, spanishWords, frenchWords, italianWords);
+        return new HomeViewModel(germanWords, spanishWords, frenchWords, italianWords, totalWords);
     }
 
     @Override
     public void addWord(AddWordBindingModel addWordBindingModel) {
         Optional<Word> optTerm = this.wordRepository.findByTerm(addWordBindingModel.getTerm());
         if(!optTerm.isPresent()){
-//            Word word = this.mapper.map(addWordBindingModel, Word.class);
             LanguageEnum languageEnum = LanguageEnum.valueOf(addWordBindingModel.getLanguage());
             Language language = this.languageRepository.findByName(languageEnum);
             Optional<User> optUser = this.userRepository.findByUsername(this.loggedUser.getUsername());
@@ -79,5 +78,20 @@ public class WordServiceImpl implements WordService {
 
             this.wordRepository.save(word);
         }
+    }
+
+    @Transactional
+    @Override
+    public void removeWord(String id) {
+        Optional<Word> optWord = this.wordRepository.findById(id);
+
+        if(optWord.isPresent()){
+            this.wordRepository.delete(optWord.get());
+        }
+    }
+
+    @Override
+    public void removeAll() {
+        this.wordRepository.deleteAll();
     }
 }
