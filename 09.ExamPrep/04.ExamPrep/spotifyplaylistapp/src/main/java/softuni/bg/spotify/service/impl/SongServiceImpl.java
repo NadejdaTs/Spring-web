@@ -14,13 +14,11 @@ public class SongServiceImpl implements SongService {
     private final UserRepository userRepository;
     private final SongRepository songRepository;
     private final StyleService styleService;
-    private final SongService songService;
 
-    public SongServiceImpl(UserRepository userRepository, SongRepository songRepository, StyleService styleService, SongService songService) {
+    public SongServiceImpl(UserRepository userRepository, SongRepository songRepository, StyleService styleService) {
         this.userRepository = userRepository;
         this.songRepository = songRepository;
         this.styleService = styleService;
-        this.songService = songService;
     }
 
 //    @Override

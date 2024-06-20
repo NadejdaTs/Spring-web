@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface StyleRepository extends JpaRepository<Style, String> {
-    Optional<Style> findByStyle(StyleName styleName);
+//    Optional<Style> findByStyle(StyleName styleName);
 }
